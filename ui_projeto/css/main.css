@@ -1,0 +1,536 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   CSS RESET
+   ========================================================================== */   
+   
+   html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, input, button, 
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0px;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ==========================================================================
+   PAGE STYLES
+   ========================================================================== */   
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: Arial !important;
+	font-size: 15px;
+	overflow: hidden;
+}
+
+/*************************************/
+
+#mainContainer {
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(-90deg, #666, #222);
+}
+
+#card {
+	width: 60%;
+	height: 60%;
+	position: absolute;
+	top: 10%;
+	left: 20%;
+	background-color: #EFF;
+	border-radius: 5px;
+}
+
+.cardRow {
+	width: 100%;
+	float: left;
+	position: relative;
+	top: -5%;
+}
+
+/*************************************/
+
+#avatarContainer {
+	height: 25%;
+}
+
+#avatarContainer>img#avatarImg {
+	width: 15%;
+	height: 95%;	
+	position: relative;	
+	left: 42.5%;
+	border: 5px solid #EFF;
+	border-radius: 1000px;
+}
+
+/*************************************/
+
+#nameContainer {
+	height: 15%;
+}
+
+#nameContainer>p {
+	width: 100%;
+	height: 50%;
+	float:left;
+	text-align: center;
+}
+
+#nameContainer>p#name {
+	font-size: 1.2em;
+	color: #333;
+}
+
+#nameContainer>p#title {
+	font-size: 0.8em;
+	color: #999;
+}
+
+#nameContainer>p#title>span {
+	color: #333;
+}
+
+/*************************************/
+
+#emailContainer {
+	height: 8%;
+}
+
+#emailContainer>p {
+	width: 45%;
+	height: 100%;
+	float: left;
+	color: #999;
+	font-size: 0.8em;
+}
+
+#emailContainer>p#emailLabel {
+	padding-left: 5%;
+}
+	
+#emailContainer>p#email {
+	padding-right: 5%;
+	text-align: right;	
+	color: #333;
+	text-decoration: underline;
+}
+
+/*************************************/
+
+#phoneContainer {
+	height: 8%;
+}
+
+#phoneContainer>p {
+	width: 45%;
+	height: 100%;
+	float: left;
+	color: #999;
+	font-size: 0.8em;
+}
+
+#phoneContainer>p#phoneLabel {		
+	padding-left: 5%;	
+}
+
+#phoneContainer>p#phone {	
+	text-align: right;
+	padding-right: 2.5%
+}
+
+/*************************************/
+
+#acessoriesContainer {
+	width: 90%;
+	height: 22%;
+	position: relative;
+	left: 5%;
+	padding: 1%;
+	font-size: 0.8em;
+	color: #555;
+	border: 1px solid #CCC;
+	border-radius: 5px;	
+}
+
+#acessoriesContainer>input[type=checkbox] {
+    display:none;
+}
+ 
+#acessoriesContainer>label {
+    cursor: pointer;
+}
+
+#acessoriesContainer>input[type="checkbox"] + label:before {
+	height: 22%;
+	width: 10%;
+	content: "\00a0";
+	display: inline-block;
+	font-size: 1em;
+    border: 1px solid #999;	
+    margin: 0 .25em 0.5% 0;
+    padding:0;
+    vertical-align: top;
+    border-radius: 5px;
+    text-align: center;
+	vertical-align: middle;
+}
+ 
+#acessoriesContainer>input[type="checkbox"]:checked + label:before {
+    content: "\00a0";
+    text-align: center;
+	vertical-align: middle;
+    background: #222;
+    color: #FFF;
+}
+ 
+#acessoriesContainer>input[type="checkbox"]:checked + label:after {
+    font-weight: bold;
+}
+
+
+#acessoriesContainer>input[type="text"] {
+	width: 100%;
+	height: 30%;
+	color: #222;
+	border: 1px solid #999;
+	border-radius: 5px;
+	background: transparent;
+	transition: 0.5s 0.1s linear;
+}
+
+#acessoriesContainer>input[type="text"]:focus {
+	color: #222;
+}
+
+/*************************************/
+
+#sendMsgContainer {
+	height: 15%;
+}
+
+#sendMsgContainer>button {
+	width: 90%;
+	height: 70%;
+	position: relative;
+	top: 15%;
+	left: 5%;
+	background-color: #666;
+	color: #EFF;
+	border: none;
+	border-radius: 5px;
+	outline: 0;
+	transition: 0.5s 0.1s linear;
+}
+
+#sendMsgContainer>button:hover {
+	background-color: #222;
+	color: "#FFF";
+}
+
+/*************************************/
+
+#reportContainer {
+	height: 6%;
+}
+
+#reportContainer>p {	
+	width: 100%;
+	height: 100%;
+	color: #999;
+	font-size: 0.7em;
+	text-align: center;
+	text-decoration: underline;
+	cursor: pointer;
+	transition: 0.5s 0.1s linear;
+}
+
+#reportContainer>p:hover {
+	color: #555;
+}
+
+/*************************************/
+
+#freezone {
+	width: 60%;
+	height: 20%;
+	position: absolute;
+	top: 75%;
+	left: 20%;
+	background-color: #EFF;
+	border-radius: 5px;
+}
+
+#freezone>a {
+	width: 50%;
+	height: 50%;
+	float: left;
+	padding-top: 0%;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#freezone>a>p {
+	width: 100%;
+	height: 100%;
+	font-size: 0em;
+}
+
+#freezone>a>p>img {	
+	height: 75%;
+	padding-top: 10%;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+	html, body {
+		font-size: 20px;
+	}
+	
+	#acessoriesContainer>input[type="checkbox"] + label:before {
+		width: 5%;
+	}
+		
+
+	#freezone>a {
+		width: 100%;
+		height: 20%;
+		float: left;
+		padding-top: 0.7%;
+		text-decoration: none;
+	}
+
+	#freezone>a>p {
+		width: 100%;
+		height: 100%;
+		font-size: 1em;
+		color: #999;
+		transition: 0.5s 0.1s linear;
+		cursor: pointer;
+	}
+
+	#freezone>a>p:hover {
+		color: #222;
+	}
+
+	#freezone>a>p>img {
+		height: 100%;
+		padding-top: 0%;
+	}
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
